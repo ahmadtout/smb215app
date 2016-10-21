@@ -14,4 +14,13 @@ il entre, il fait entree les contenu le nom de paragraph, les contenue du paragr
 puis il choit la partie et la sous partie 
 puis il choisie la couleur de backround de chaque paragraph 
 puis il choisie s'il doit choisie des notes et les qules 
-puis il press sur save
+puis il press sur save.
+
+ici les donnes entres sont sauvgardes dans une database MySql.
+
+il y a une fonction edit pour faire editee si il y a des changement
+
+Pour faire cela marchee offline
+on doit fair generes ces page sous la forme des pages HTML qui doit etres mis dans les files de l'application avant quelle est cree pour ce loder du locale.
+
+
