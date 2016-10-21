@@ -1,8 +1,8 @@
 # smb215app
-Pour isae cnam Smb215
-Cette application est fait pour besoin scolaire
-En general on a besoin de fair les livres scolaire sous la forme d'une application Mobile qui marche sur Android et IOS et qui marche Hors connection (en absence de resaux)
-Alors d'ici vient mon idee.
+Pour isae cnam Smb215 <br>
+Cette application est fait pour besoin scolaire <br>
+En general on a besoin de fair les livres scolaire sous la forme d'une application Mobile qui marche sur Android et IOS et qui marche Hors connection (en absence de resaux) <br>
+Alors d'ici vient mon idee. <br>
 
 
 Premierment j'avit l'ide de fair un interface simple pour la personne qui doit copier les text et c'est le SERVER SIDE de l'application
