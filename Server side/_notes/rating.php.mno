@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rs_rat" value="name:id;datatype:int,name:name;datatype:string,name:country;datatype:string,name:gender;datatype:string,name:rate;datatype:string,name:notes;datatype:blob,name:date_created;datatype:timestamp" />
+</info>

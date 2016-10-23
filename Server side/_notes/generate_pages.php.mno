@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rs_page" value="name:page_id;datatype:int,name:page_name;datatype:string,name:page_note;datatype:blob,name:page_img1;datatype:string,name:page_img2;datatype:string,name:page_pdf;datatype:blob" />
+</info>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rs_subcat" value="name:s_id;datatype:int,name:s_name;datatype:string,name:category_id;datatype:int" />
+</info>
