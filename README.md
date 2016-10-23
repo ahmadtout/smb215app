@@ -21,7 +21,7 @@ ici les donnes entres sont sauvgardes dans une database MySql.
 
 il y a une fonction edit pour faire editee si il y a des changement
 
-Pour faire cela marchee offline
+Pour faire cela marchee offline <br>
 on doit fair generes ces page sous la forme des pages HTML qui doit etres mis dans les files de l'application avant quelle est cree pour ce loder du locale.
 
 
