@@ -6,7 +6,7 @@ En general on a besoin de fair les livres scolaire sous la forme d'une applicati
 Alors d'ici vient mon idee. <br>
 
 
-Premierment j'avit l'ide de fair un interface simple pour la personne qui doit copier les text et c'est le SERVER SIDE de l'application
+Premierment j'avit l'ide de fair un interface simple pour la personne qui doit copier les text et c'est le <b> SERVER SIDE </b> de l'application
 cet interface est dans un serveur en ligne.
 la technologie ici c'est le php avec Mysql
 il a un login
