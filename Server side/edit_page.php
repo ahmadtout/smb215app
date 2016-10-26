@@ -101,7 +101,7 @@ if ((isset($_POST["MM_update"])) && ($_POST["MM_update"] == "form1")) {
 
   $last_id =$_POST['page_id'];
   
-  //deleted all related ahdas 
+  //deleted all related notes 
   $deleteSQL = sprintf("DELETE FROM pagexahdas WHERE page_id=%s",
                        GetSQLValueString( $last_id, "int"));
 
@@ -109,7 +109,7 @@ if ((isset($_POST["MM_update"])) && ($_POST["MM_update"] == "form1")) {
   $Result1 = mysql_query($deleteSQL, $conn) or die(mysql_error());
   
    if(isset($_POST['ahdas_id']) && is_array($_POST['ahdas_id']) && count($_POST['ahdas_id'])>0)
-   foreach($_POST['ahdas_id'] as $v)
+   foreach($_POST['_id'] as $v)
    {
     $insertSQL = sprintf("INSERT INTO pagexahdas (page_id, ahdas_id) VALUES (%s, %s)",
                        GetSQLValueString($last_id , "int"),
@@ -434,7 +434,7 @@ do {
                 
                  <div class="col-md-12">
                 	<div class="form-group">
-                       <label for="Note">اضافة حدث</label>
+                       <label for="Note">Notes:</label>
                                 <select name="ahdas_id[]" multiple size="6">
   <?php
 do {  
