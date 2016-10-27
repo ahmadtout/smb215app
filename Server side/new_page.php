@@ -1,4 +1,4 @@
-<?php require_once('Connections/conn.php'); ?>
+﻿<?php require_once('Connections/conn.php'); ?>
 <?php
 if (!isset($_SESSION)) {
   session_start();
@@ -271,7 +271,7 @@ $totalRows_rs_ahdas = mysql_num_rows($rs_ahdas);
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sira</title>
+    <title>BookInterface</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -397,7 +397,7 @@ do {
                 
                    <div class="col-md-12">
                 	<div class="form-group">
-                       <label for="Note">اضافة حدث</label>
+                       <label for="Note">Notes: </label>
                                 <select name="ahdas_id[]" multiple size="6">
   <?php
 do {  
