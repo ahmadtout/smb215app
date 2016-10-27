@@ -14,11 +14,10 @@
     <div class="sidebar-nav navbar-collapse">
       <ul class="nav" id="side-menu">
         
-        <li> <a  href="new_page.php"><i class="fa fa-barcode fa-fw"></i> Pages</a> </li>
-          <li> <a  href="ahdas.php"><i class="fa fa-barcode fa-fw"></i> Ahdas</a> </li>
-         
-        
-         
+        <li> <a  href="new_page.php"><i class="fa fa-book fa-fw"></i> Pages</a> </li>
+          <li> <a  href="notes.php"><i class="fa fa-file-text fa-fw"></i> Notes</a> </li>
+          <li> <a  href="audio.php"><i class="fa fa-file-audio-o  fa-fw"></i> Audio</a> </li>
+		  <li> <a  href="users.php"><i class="fa fa-user-plus fa-fw"></i> Users</a> </li>
           <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a> </li>
       </ul>
     </div>
