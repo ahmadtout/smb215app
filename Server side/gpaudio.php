@@ -54,14 +54,14 @@ $totalRows_rs_audio = mysql_num_rows($rs_audio);
   
      <div class="audio-item">
         <div class="icon-audio">
-         <a href="<?php echo $row_rs_audio['audio_link']; ?>" download="<?php echo $row_rs_audio['audio_name']; ?>.mp3" style="text-decoration:none;" >
+         <a  onclick="downloadmp3('<?php echo $row_rs_audio['audio_filename']; ?>')"   style="text-decoration:none;" >
                 <span class=" fa-stack margin-icons-home">
                                 <i class="fa fa-circle fa-stack-2x color_brown"></i>
                                 <i class="fa fa-cloud-download  fa-stack fa-inverse"></i>
                             </span>
                         </a>    
          
-             <span class=" fa-stack margin-icons-home track" ref="<?php echo $row_rs_audio['audio_link']; ?>" title="<?php echo $row_rs_audio['audio_name']; ?>">
+             <span class=" fa-stack margin-icons-home track" ref="<?php echo $row_rs_audio['audio_link']; ?>" filename="<?php echo $row_rs_audio['audio_filename']; ?>" title="<?php echo $row_rs_audio['audio_name']; ?>">
                                 <i class="fa fa-circle fa-stack-2x color_brown"></i>
                                 <i class="fa fa-play  fa-stack fa-inverse"></i>
                             </span>    
@@ -120,9 +120,11 @@ $totalRows_rs_audio = mysql_num_rows($rs_audio);
 </div> 
 
 <script type="text/javascript">
+// JavaScript Document
+var my_jPlayer;
 $(document).ready(function() {
 
- var my_jPlayer = $("#jquery_jplayer_1");
+ my_jPlayer = $("#jquery_jplayer_1");
  var my_trackName = "";
  my_jPlayer.jPlayer({
         ready: function(event) {
@@ -151,22 +153,34 @@ $(document).ready(function() {
 		 $(this).find('.fa-inverse').removeClass('fa-play').addClass('fa-pause');
 		 
 		my_trackName=$(this).attr("title");
-		my_jPlayer.jPlayer("setMedia", {
-			title:my_trackName,
-			mp3: $(this).attr("ref")
+		
+		var path = $(this).attr("ref");
+		
+		var fileName = $(this).attr("filename");;
+		
+	 getMP3(fileName, function(a){
+		console.log("path"+a);
+		
+		 my_jPlayer.jPlayer("setMedia", {
+					title:my_trackName,
+					mp3: a
+				});  
+			 	console.log(my_jPlayer);
+				if(isplayed)
+					my_jPlayer.jPlayer("pause");
+					else
+					my_jPlayer.jPlayer("play");
+		
 		});
-		 
-		 	if(isplayed)
-			my_jPlayer.jPlayer("pause");
-			else
-			my_jPlayer.jPlayer("play");
+
+	 
+		 	
 		 
 	}); 
 
   
 	
-});                                      
-                               
+});                             
 
 </script>
 <?php
