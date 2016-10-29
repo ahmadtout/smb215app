@@ -104,15 +104,13 @@ $row_rs_page = mysql_fetch_assoc($rs_page);
 $totalRows_rs_page = mysql_num_rows($rs_page);
 
 $PATH_TO_IMAGES = 'img/pages/';
- $PAGE = "";
+ $PAGE = "<div class='bookpage-container'>";
  
-$PAGE .='<nav>
-			  <ul class="pager">';
-			  
+ 
 			  $S_ID = $row_rs_subcat['s_id'];
 			  //Check if first page don't show the first button
 			  if($S_ID!=1)
-				$PAGE .='<li style="width: 70%;margin: 10px;" class="pager-prev pull-right"><a style="background-color: #d0ad78;color: white;" onclick="loadPage('.($S_ID-1).')" >'.$ALL_SUB_CAT[$S_ID-1]['name'].' - '.$ALL_SUB_CAT[$S_ID-1]['s_name'].' <span style="    margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span> </a></li></ul></nav>';
+				$PAGE .='<nav> <ul class="pager"><li style="width: 70%;margin: 10px;" class="pager-prev pull-right"><a style="background-color: #d0ad78;color: white;dirction:rtl;" onclick="loadPage('.($S_ID-1).')" > <span style="white-space:nowrap;    direction: rtl;" >'.$ALL_SUB_CAT[$S_ID-1]['name'].' <br /> '.$ALL_SUB_CAT[$S_ID-1]['s_name'].'</span> <span style="    margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span> </a></li></ul></nav>';
 				 
 				 
 $PAGE .='<h1 class="color-brown" align="center" style="background-color: white;padding: 20px;">'.$row_rs_subcat['s_name'].'</h1>';				 
@@ -511,12 +509,15 @@ if($totalRows_rs_ahdas)
  </div>';
 					  
 				else
-				$PAGE .='<li style="width: 70%;margin: 10px;" class="pager-next  pull-left"><a style="background-color: #d0ad78;color: white;" onclick="loadPage('.($S_ID+1).')"><span style="margin-right: 10px;"  class="glyphicon glyphicon-arrow-left"></span> '.$ALL_SUB_CAT[$S_ID+1]['name'].' - '.$ALL_SUB_CAT[$S_ID+1]['s_name'].' </a></li>';
+				$PAGE .='<li style="width: 70%;margin: 10px;" class="pager-next  pull-left"><a style="background-color: #d0ad78;color: white; " onclick="loadPage('.($S_ID+1).')"><span style="margin-right: 10px;"  class="glyphicon glyphicon-arrow-left"></span> <span style="white-space:nowrap;    direction: rtl;" >'.$ALL_SUB_CAT[$S_ID+1]['name'].' <br /> '.$ALL_SUB_CAT[$S_ID+1]['s_name'].' </span></a></li>';
 				
 				
 	
 	$PAGE .='  </ul>
 			</nav>';
+			
+			
+$PAGE .= "</div>";//end pagebook-container			
 // END navigation 	
 
 	
