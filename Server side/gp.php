@@ -140,7 +140,7 @@ else
  $PAGE .='<h2>'.$row_rs_page['page_name'].'</h2>';
  
  if($row_rs_page['page_img1'])
-{ $PAGE .='<img src="'.$PATH_TO_IMAGES.$row_rs_page['page_img1'].'" class="page-img-2" />';
+{ $PAGE .='<div class="pinch-zoom"><img src="'.$PATH_TO_IMAGES.$row_rs_page['page_img1'].'" class="page-img-2" /></div>';
 	$PAGE .='<p align="center">'.$row_rs_page['label_img1'].'"  </p>';
 	}
  
@@ -148,7 +148,7 @@ $PAGE .='<p>'.$row_rs_page['page_note'].'</p>';
 
 if($row_rs_page['page_img2'])
 {
- $PAGE .='<img src="'.$PATH_TO_IMAGES.$row_rs_page['page_img2'].'"  class="page-img-2" />';
+ $PAGE .='<div class="pinch-zoom"><img src="'.$PATH_TO_IMAGES.$row_rs_page['page_img2'].'"  class="page-img-2" /></div>';
  $PAGE .='<p align="center">'.$row_rs_page['label_img2'].'"  </p>';
 	}
  $PAGE .='</div>';
@@ -207,7 +207,15 @@ if($totalRows_rs_ahdas)
        
     </div>
   </div>
-</div>';
+</div>
+    <script type="text/javascript">
+        $(function () {
+            $("div.pinch-zoom").each(function () {
+                new RTP.PinchZoom($(this), {});
+            });
+        })
+    </script>
+';
 
  }
  ////////////////// End AHDAS ////////////////////////////////////////////////////////
