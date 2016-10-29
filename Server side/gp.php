@@ -110,7 +110,7 @@ $PATH_TO_IMAGES = 'img/pages/';
 			  $S_ID = $row_rs_subcat['s_id'];
 			  //Check if first page don't show the first button
 			  if($S_ID!=1)
-				$PAGE .='<nav> <ul class="pager"><li style="width: 70%;margin: 10px;" class="pager-prev pull-right"><a style="background-color: #d0ad78;color: white;dirction:rtl;" onclick="loadPage('.($S_ID-1).')" > <span style="white-space:nowrap;    direction: rtl;" >'.$ALL_SUB_CAT[$S_ID-1]['name'].' <br /> '.$ALL_SUB_CAT[$S_ID-1]['s_name'].'</span> <span style="    margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span> </a></li></ul></nav>';
+				$PAGE .='<nav> <ul class="pager"><li style="width: 70%;margin: 10px;" class="pager-prev pull-right"><a style="background-color: #d0ad78;color: white;dirction:rtl;" onclick="loadPage('.($S_ID-1).')" > <span style="direction: rtl;" >'.$ALL_SUB_CAT[$S_ID-1]['name'].' <br /> '.$ALL_SUB_CAT[$S_ID-1]['s_name'].'</span> <span style="    margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span> </a></li></ul></nav>';
 				 
 				 
 $PAGE .='<h1 class="color-brown" align="center" style="background-color: white;padding: 20px;">'.$row_rs_subcat['s_name'].'</h1>';				 
@@ -122,18 +122,22 @@ $PAGE .='<h1 class="color-brown" align="center" style="background-color: white;p
  
  if($BG_COLOR==0)
  {
-	 	$PAGE .='<div class="white-bg section page-section " style="background-color:'.$row_rs_page['color'].'" color="'.$row_rs_page['color'].'" id="page'.$row_rs_page['page_id'].'" page_id="'.$row_rs_page['page_id'].'"  subcat_id="'.$row_rs_subcat['s_id'].'" subcatTitle="'.$row_rs_page['page_name'].'"  pagecontent="'.$row_rs_page['page_note'].'" >';
+	 	$PAGE .='<div class="white-bg section page-section " style="background-color:'.$row_rs_page['color'].'" color="'.$row_rs_page['color'].'" id="page'.$row_rs_page['page_id'].'" page_id="'.$row_rs_page['page_id'].'"  subcat_id="'.$row_rs_subcat['s_id'].'" subcatTitle="'.strip_tags($row_rs_page['page_name']).'"  pagecontent="'.strip_tags($row_rs_page['page_note']).'" >';
 		$BG_COLOR = 1;
  }
 else	
 	{
-		$PAGE .='<div class="gray-bg section page-section " style="background-color:'.$row_rs_page['color'].'" color="'.$row_rs_page['color'].'" id="page'.$row_rs_page['page_id'].'" page_id="'.$row_rs_page['page_id'].'"  subcat_id="'.$row_rs_subcat['s_id'].'" subcatTitle="'.$row_rs_page['page_name'].'"  pagecontent="'.$row_rs_page['page_note'].'" >';
+		$PAGE .='<div class="gray-bg section page-section " style="background-color:'.$row_rs_page['color'].'" color="'.$row_rs_page['color'].'" id="page'.$row_rs_page['page_id'].'" page_id="'.$row_rs_page['page_id'].'"  subcat_id="'.$row_rs_subcat['s_id'].'" subcatTitle="'.strip_tags($row_rs_page['page_name']).'"  pagecontent="'.strip_tags($row_rs_page['page_note']).')" >';
 		$BG_COLOR = 0;
 	}
 	
- 
- $PAGE .='
- <h2>'.$row_rs_page['page_name'].'</h2>';
+  $PAGE .='<div style="text-align: center;height: 15px;"><span style="float: left;" class="  fa-stack margin-icons-home" onclick="bookrmarkTOPLET(this)">
+                        <i class="fa fa-circle fa-stack-2x color_brown"></i>
+                        <i class="fa  fa-bookmark-o fa-stack fa-inverse bookmark-icon"></i>
+                    </span>
+					</div>';
+  
+ $PAGE .='<h2>'.$row_rs_page['page_name'].'</h2>';
  
  if($row_rs_page['page_img1'])
 { $PAGE .='<img src="'.$PATH_TO_IMAGES.$row_rs_page['page_img1'].'" class="page-img-2" />';
@@ -509,7 +513,7 @@ if($totalRows_rs_ahdas)
  </div>';
 					  
 				else
-				$PAGE .='<li style="width: 70%;margin: 10px;" class="pager-next  pull-left"><a style="background-color: #d0ad78;color: white; " onclick="loadPage('.($S_ID+1).')"><span style="margin-right: 10px;"  class="glyphicon glyphicon-arrow-left"></span> <span style="white-space:nowrap;    direction: rtl;" >'.$ALL_SUB_CAT[$S_ID+1]['name'].' <br /> '.$ALL_SUB_CAT[$S_ID+1]['s_name'].' </span></a></li>';
+				$PAGE .='<li style="width: 70%;margin: 10px;" class="pager-next  pull-left"><a style="background-color: #d0ad78;color: white; " onclick="loadPage('.($S_ID+1).')"><span style="margin-right: 10px;"  class="glyphicon glyphicon-arrow-left"></span> <span style="direction: rtl;" >'.$ALL_SUB_CAT[$S_ID+1]['name'].' <br /> '.$ALL_SUB_CAT[$S_ID+1]['s_name'].' </span></a></li>';
 				
 				
 	
