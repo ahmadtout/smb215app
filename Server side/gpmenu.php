@@ -75,11 +75,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
-mysql_select_db($database_conn, $conn);
-$query_rs_subcat = "SELECT * FROM subcat";
-$rs_subcat = mysql_query($query_rs_subcat, $conn) or die(mysql_error());
-$row_rs_subcat = mysql_fetch_assoc($rs_subcat);
-$totalRows_rs_subcat = mysql_num_rows($rs_subcat);
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -89,16 +85,70 @@ $totalRows_rs_subcat = mysql_num_rows($rs_subcat);
 </head>
 
 <body>
-<blockquote>
+
+
+    
+<div class="panel-group  fahras-accordion" id="accordion" dir="rtl" role="tablist" aria-multiselectable="true">
+
+
+
 <?php
+
+
+mysql_select_db($database_conn, $conn);
+$query_rs_category = "SELECT * FROM category";
+$rs_category = mysql_query($query_rs_category, $conn) or die(mysql_error());
+$row_rs_category = mysql_fetch_assoc($rs_category);
+$totalRows_rs_category = mysql_num_rows($rs_category);
+
+ do { 
+ 
+ ?>
+ 
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapse<?php echo $row_rs_category['id'] ?>" aria-expanded="true" aria-controls="collapse<?php echo $row_rs_category['id'] ?>">
+         <?php echo $row_rs_category['name'] ?>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse<?php echo $row_rs_category['id'] ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $row_rs_category['id'] ?>">
+      <div class="panel-body">
+      
+      <ul  class="list-group">
+      <?php 
+	  
+	  
+mysql_select_db($database_conn, $conn);
+$query_rs_subcat = "SELECT * FROM subcat where category_id = ".$row_rs_category['id'];
+$rs_subcat = mysql_query($query_rs_subcat, $conn) or die(mysql_error());
+$row_rs_subcat = mysql_fetch_assoc($rs_subcat);
+$totalRows_rs_subcat = mysql_num_rows($rs_subcat);
 
 do {
 	
  
- echo '<a  onclick="loadPage('.$row_rs_subcat['s_id'].')" class="list-group-item">'.$row_rs_subcat['s_name'].'</a>';
+ echo '<li class="list-group-item"><a  onclick="loadPage('.$row_rs_subcat['s_id'].')" class="list-group-item">'.$row_rs_subcat['s_name'].'</a></li>';
 	
     
-} while ($row_rs_subcat = mysql_fetch_assoc($rs_subcat)); ?>
-</blockquote>
+} while ($row_rs_subcat = mysql_fetch_assoc($rs_subcat)); 
+
+?>
+</ul>
+      
+      </div>
+    </div>
+  </div>
+<?php
+
+
+} while ($row_rs_category = mysql_fetch_assoc($rs_category)); ?>
+
+ 
+   
+   
+</div>
+
 </body>
 </html>
