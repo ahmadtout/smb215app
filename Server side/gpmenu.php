@@ -149,7 +149,7 @@ do {
  <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
-        <a role="button"   onclick="loadPage('form')"    >تقييم الكتاب </a>
+        <a role="button"   onclick="loadPage('form')" >Évaluation du livre</a>
       </h4>
     </div>
      

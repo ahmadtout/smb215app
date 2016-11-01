@@ -1,4 +1,4 @@
-<?php require_once('Connections/conn.php'); ?>
+﻿<?php require_once('Connections/conn.php'); ?>
 <?php
 if (!isset($_SESSION)) {
   session_start();
@@ -110,7 +110,7 @@ $PATH_TO_IMAGES = 'img/pages/';
 			  $S_ID = $row_rs_subcat['s_id'];
 			  //Check if first page don't show the first button
 			  if($S_ID!=1)
-				$PAGE .='<nav> <ul class="pager"><li style="width: 70%;margin: 10px;" class="pager-prev pull-right"><a style="background-color: #d0ad78;color: white;dirction:rtl;" onclick="loadPage('.($S_ID-1).')" > <span style="direction: rtl;" >'.$ALL_SUB_CAT[$S_ID-1]['name'].' <br /> '.$ALL_SUB_CAT[$S_ID-1]['s_name'].'</span> <span style="    margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span> </a></li></ul></nav>';
+				$PAGE .='<nav> <ul class="pager"><li style="width: 70%;margin: 10px;" class="pager-prev pull-right"><a style="background-color: #d0ad78;color: white;dirction:ltr;" onclick="loadPage('.($S_ID-1).')" > <span style="direction: ltr;" >'.$ALL_SUB_CAT[$S_ID-1]['name'].' <br /> '.$ALL_SUB_CAT[$S_ID-1]['s_name'].'</span> <span style="    margin-left: 10px;" class="glyphicon glyphicon-arrow-right"></span> </a></li></ul></nav>';
 				 
 				 
 $PAGE .='<h1 class="color-brown" align="center" style="background-color: white;padding: 20px;">'.$row_rs_subcat['s_name'].'</h1>';				 
@@ -167,7 +167,7 @@ if($totalRows_rs_ahdas)
 {
 	
 	$PAGE .='<div class="ahdas-section section  " >
-			  <div class="ahdas-header ">احداث عالمية</div>
+			  <div class="ahdas-header ">Notes</div>
 			  <div class="ahdas-container">
 				<div class=" white-bg" style="    padding-bottom: 29px;">
 				  <div id="ahdas'.$row_rs_page['page_id'].'" class="carousel slide carousel-ahdas " data-ride="carousel"> ';
@@ -208,13 +208,7 @@ if($totalRows_rs_ahdas)
     </div>
   </div>
 </div>
-    <script type="text/javascript">
-        $(function () {
-            $("div.pinch-zoom").each(function () {
-                new RTP.PinchZoom($(this), {});
-            });
-        })
-    </script>
+
 ';
 
  }
@@ -235,13 +229,13 @@ if($totalRows_rs_ahdas)
 				
 				
 				if($S_ID==$totalRows_rs_subcat)
-					  //$PAGE .='<li class="pager-next pull-left"><a style="background-color: #d0ad78;color: white;" onclick="loadPage(\'rating\')"><span style="margin-right: 10px;"  class="glyphicon glyphicon-arrow-left"></span> تقييم </a></li>';
-					  $PAGE .='<div dir="rtl" style="clear: both;" class="white-bg section">
-<div class="send_button btn"><h2 style="margin: 5px;">نهاية الكتاب</h2></div>
-  <h3>تقييم الكتاب</h3>
+					  //$PAGE .='<li class="pager-next pull-left"><a style="background-color: #d0ad78;color: white;" onclick="loadPage(\'rating\')"><span style="margin-right: 10px;"  class="glyphicon glyphicon-arrow-left"></span> Évaluation</a></li>';
+					  $PAGE .='<div dir="ltr" style="clear: both;" class="white-bg section">
+<div class="send_button btn"><h2 style="margin: 5px;">fin du livre </h2></div>
+  <h3>Évaluation du livre</h3>
   <form role="form" class="rat-form">
     <div class="form-group" >
-      <label for="name">الإسم:</label>
+      <label for="name">Nom:</label>
       <input type="text"   id="name">
     </div>
     
@@ -498,30 +492,30 @@ if($totalRows_rs_ahdas)
     </select>  
     </div>
     <div class="radio form-group">
-	  <label>الجنس</label>
-      <label><input type="radio" name="gender" value="female"> انثى</label>
-	  <label><input type="radio" name="gender" value="male"> ذكر</label>
+	  <label>Sex</label>
+      <label><input type="radio" name="gender" value="female"> Femelle </label>
+	  <label><input type="radio" name="gender" value="male"> Mâle</label>
     </div>
 	<div class="radio form-group">
-      <label>التقييم</label>
+      <label>Évaluation</label>
       <label><input type="radio" name="rate" value="1"> 1</label>
       <label><input type="radio" name="rate" value="2"> 2</label>
-	  <label><input type="radio" name="rate" value="3"> 3</label>
+      <label><input type="radio" name="rate" value="3"> 3</label>
       <label><input type="radio" name="rate" value="4"> 4</label>
       <label><input type="radio" name="rate" value="5"> 5</label>	  
     </div>
     <div class="form-group" style="height:150px;">
-      <label for="notes">الملاحظات:</label>
+      <label for="notes">Notes:</label>
       <textarea id="notes" ></textarea>
     </div>	
 
 	
-    <button type="button" class="btn btn-default send_button" onClick="sendRating()">إرسال</button>
+    <button type="button" class="btn btn-default send_button" onClick="sendRating()">Envoyer</button>
   </form>
  </div>';
 					  
 				else
-				$PAGE .='<li style="width: 70%;margin: 10px;" class="pager-next  pull-left"><a style="background-color: #d0ad78;color: white; " onclick="loadPage('.($S_ID+1).')"><span style="margin-right: 10px;"  class="glyphicon glyphicon-arrow-left"></span> <span style="direction: rtl;" >'.$ALL_SUB_CAT[$S_ID+1]['name'].' <br /> '.$ALL_SUB_CAT[$S_ID+1]['s_name'].' </span></a></li>';
+				$PAGE .='<li style="width: 70%;margin: 10px;" class="pager-next  pull-left"><a style="background-color: #d0ad78;color: white; " onclick="loadPage('.($S_ID+1).')"><span style="margin-right: 10px;"  class="glyphicon glyphicon-arrow-left"></span> <span style="direction: ltr;" >'.$ALL_SUB_CAT[$S_ID+1]['name'].' <br /> '.$ALL_SUB_CAT[$S_ID+1]['s_name'].' </span></a></li>';
 				
 				
 	
@@ -529,7 +523,14 @@ if($totalRows_rs_ahdas)
 			</nav>';
 			
 			
-$PAGE .= "</div>";//end pagebook-container			
+$PAGE .= '</div>
+    <script type="text/javascript">
+        $(function () {
+            $("div.pinch-zoom").each(function () {
+                new RTP.PinchZoom($(this), {});
+            });
+        })
+    </script>';//end pagebook-container			
 // END navigation 	
 
 	
