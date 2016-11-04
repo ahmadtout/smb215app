@@ -1,0 +1,95 @@
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs home-tabs" role="tablist">
+    <li role="presentation" class=""><a href="#home" id="commentsTab" aria-controls="profile" role="tab" data-toggle="tab">Commentaires</a></li>
+    <li role="presentation" class="active"><a href="#profile" aria-controls="home" role="tab" data-toggle="tab">A propos du livre</a></li>
+    
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active homepagecontent" id="profile"><div class="" style="    padding-top: 15px;">
+
+ 
+<div >
+
+<div id="myCarousel" class="carousel slide carousel-home" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="img\home slider\AA1.jpg" alt="1" class="img-resposive center-block">
+    </div>
+
+    <div class="item">
+      <img src="img\home slider\AA2.jpg" alt="1" class="img-resposive center-block">
+    </div>
+
+    <div class="item">
+	  <img src="img\home slider\AA3.jpg" alt="1" class="img-resposive center-block">
+    </div>
+  </div>
+
+   
+</div>
+<div class=" bg-white" style="text-align:right; padding:15px;direction:rtl;">
+<h3 class="color-brown" align="center" dir="rtl">Project du livre</h3>
+
+</div>
+<br>
+<div class="row text-center">
+                <div class="col-xs-4">
+                <div class="text_style bg-white">
+                    <span class="fa-stack margin-icons-home" onclick="GetBookmarks()">
+                        <i class="fa fa-circle  fa-stack-2x  color_brown"></i>
+                        <i class="fa fa-bookmark fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Bookmarks</h4>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                <div class="text_style bg-white" onclick="loadPageaudio();">
+                    <span class="fa-stack margin-icons-home">
+                        <i class="fa fa-circle fa-stack-2x color_brown"></i>
+                        <i class="fa fa-volume-up fa-stack fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Music</h4>
+                   </div>
+                </div>
+                <div class="col-xs-4">
+                <div class="text_style bg-white" onclick="loadLastPage()" > 
+                    <span class="fa-stack margin-icons-home">
+                        <i class="fa fa-circle fa-stack-2x color_brown"></i>
+                        <i class="fa fa-book fa-stack-1x fa-inverse" dir="rtl"></i>
+                    </span>
+                    <h4 class="service-heading"> Lire le livre </h4>
+                    </div>
+                </div>
+            </div>
+
+</div>
+</div>
+</div>
+
+<!------------------------------End First tab----------------->
+    <div role="tabpanel" class="tab-pane rating-body" id="home"></div>
+    <!------------------------------End second tab----------------->
+ 
+  </div>
+
+</div>
+<script type="text/javascript">
+getRating();
+  $("#myCarousel").swiperight(function() {  
+    		  $(this).carousel('prev');  
+	    		});  
+		   $("#myCarousel").swipeleft(function() {  
+		      $(this).carousel('next');  
+	   }); 
+	   
+</script>
