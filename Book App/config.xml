@@ -52,3 +52,8 @@
 <!--<plugin name="org.apache.cordova.file" /> -->
     <plugin name="org.apache.cordova.file-transfer" />
 	
+	
+    <!-- Third party plugins -->
+	<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
+		<false/>
+	</gap:config-file>
