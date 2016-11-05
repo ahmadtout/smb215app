@@ -29,3 +29,8 @@
     <preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
     <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
    
+ 
+	<preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreenDelay" value="5000"/> 
+    <!-- Plugins -->
+	
