@@ -57,3 +57,7 @@
 	<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
 		<false/>
 	</gap:config-file>
+
+    <!-- Define app icon for each platform. -->
+    <icon src="icon.png"  />
+	
