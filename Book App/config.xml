@@ -40,3 +40,15 @@
 	<plugin name="org.apache.cordova.device"   />
 	<plugin name="org.apache.cordova.device-motion"  />
 	<!--<plugin name="org.apache.cordova.device-orientation"   />
+	<plugin name="org.apache.cordova.dialogs"   />
+	<plugin name="org.apache.cordova.globalization" />-->
+	<plugin name="org.apache.cordova.inappbrowser"  />
+	<!--<plugin name="org.apache.cordova.media" />
+	<plugin name="org.apache.cordova.media-capture"  />-->
+	<plugin name="org.apache.cordova.network-information"  />
+	<plugin name="org.apache.cordova.splashscreen"  />
+	<plugin name="org.apache.cordova.vibration" />
+	
+<!--<plugin name="org.apache.cordova.file" /> -->
+    <plugin name="org.apache.cordova.file-transfer" />
+	
