@@ -5,3 +5,13 @@
         version   = "1.0.7" >
 
     <name>Book App</name>
+
+    <description>
+      application pour etre utilise sans connection
+    </description>
+
+    <author href="http://cofares.com/" email="ahmadtout@gmail.com">
+        Ahmad TOUT ISAE CNAM SMB215
+    </author>
+ 
+    <preference name="permissions"                value="none"/>
