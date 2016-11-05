@@ -37,3 +37,6 @@
     <!-- Core plugins -->
 	<plugin name="org.apache.cordova.console"  />
 	<!--<plugin name="org.apache.cordova.contacts"   />-->
+	<plugin name="org.apache.cordova.device"   />
+	<plugin name="org.apache.cordova.device-motion"  />
+	<!--<plugin name="org.apache.cordova.device-orientation"   />
