@@ -155,3 +155,7 @@
 	<allow-navigation href="https://*/*" />
 	<allow-navigation href="data:*" />
 	
+	<!-- Allow all unrecognized URLs to open installed apps
+     *NOT RECOMMENDED* -->
+	<allow-intent href="*" />
+	
