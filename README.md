@@ -8,7 +8,7 @@ Le but est de fournir les livres scolaires sous forme d'application mobile inter
 <br>
 Le travail est donc divisé en deux parties : l'interface d'administration (SERVER SIDE), et l'interface utilisateur.<br>
 <br>
-<b>1- Interface d'administration - SERVER SIDE </b><br>
+<b>1- Interface d'administration - <i>SERVER SIDE</i> </b><br>
 Cette interface, hebergée sur un serveur en ligne, doit permettre à l'administrateur, d'une manière simple, d'insérer ou de modifier le contenu du livre.<br>
 Cette interface est principalement basée sur les langages HTML, PHP et MySQL.<br>
 L'accès est protégé par un système d'authentification (login). <br>
@@ -19,10 +19,8 @@ Il aura le choix, s'il le souhaite, d'insérer une image juste avant le paragrap
 Par la suite, l'éditeur insère le texte désiré, tout en ayant une large palette d'outils de formatage de texte (police, taille, couleur, etc), en lui choisissant un titre convenable.<br>
 Il peut également choisir la couleur de l'arrière-plan qui sera visible du côté de l'utilisateur.<br>
 L'éditeur peut définir pour chaque page, un ou plusieurs <i>tags</i>, qui serviront à recenser les pages portant le même tag afin de faciliter la recherche des pages selon leur contenu (en vue d'une modification ultérieure par exemple).<br>
-Le bouton "Save" servira à envoyer les données insérées vers la base de données MySQL.
+Le bouton "Save" servira à envoyer les données insérées vers la base de données MySQL.<br>
+<br>
+Afin de rendre le livre disponible hors-conection, l'interface d'administration reconstitue les données entrées par l'éditeur sous forme de page HTML, qui sera copiée et integrée dans l'application mobile.<br>
 
-
-Pour faire cela marchee offline <br>
-on doit fair generes ces page sous la forme des pages HTML qui doit etres mis dans les files de l'application avant quelle est cree pour ce loder du locale.
-
-
+<b>2- Interface utilisateur -<i> Application mobile</i></b><br>
