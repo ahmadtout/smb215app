@@ -8,6 +8,7 @@ Le but est de fournir les livres scolaires sous forme d'application mobile inter
 <br>
 Le travail est donc divisé en deux parties : l'interface d'administration (SERVER SIDE), et l'interface utilisateur.<br>
 <br>
+<br>
 <b>1- Interface d'administration - <i>SERVER SIDE</i> </b><br>
 Cette interface, hebergée sur un serveur en ligne, doit permettre à l'administrateur, d'une manière simple, d'insérer ou de modifier le contenu du livre.<br>
 Cette interface est principalement basée sur les langages HTML, PHP et MySQL.<br>
@@ -22,5 +23,18 @@ L'éditeur peut définir pour chaque page, un ou plusieurs <i>tags</i>, qui serv
 Le bouton "Save" servira à envoyer les données insérées vers la base de données MySQL.<br>
 <br>
 Afin de rendre le livre disponible hors-conection, l'interface d'administration reconstitue les données entrées par l'éditeur sous forme de page HTML, qui sera copiée et integrée dans l'application mobile.<br>
-
+<br>
+<br>
 <b>2- Interface utilisateur -<i> Application mobile</i></b><br>
+C'est l'application téléchargeable sur les mobiles et les tablettes exploitant les systèmes Android ou IOS, qui contient le livre lisible par les utilisateurs.<br>
+Cette application offre aux lecteurs de nombreuses options, dont :<br>
+- Lecture classique <br>
+- Navigation par chapitres (index)<br>
+- Recherche d'un mot ou une phrase dans tout le livre.<br>
+- Définition de marque-pages sur les parapgraphes désirées pour les retrouver plus facilement.<br>
+- Mode de lecture nocturne <br>
+- Commentaires personnels et commentaires d'utilisateurs (connection internet requise) <br>
+- Choix de la taille de police.<br>
+- Audiothèque <br>
+- Reprise de la lecture au dernier paragraphe ouvert, après la fermeture de l'application. <br>
+- Liens vers les autres livres du même éditeur.<br>
