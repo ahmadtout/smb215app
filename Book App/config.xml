@@ -98,5 +98,12 @@
         <icon src="res/icon/ios/icon-50-2x.png" width="100" height="100" />
     </platform>
 	
+	 <!-- Define app splash screen for each platform. -->
+	 <splash src="screen.png"      />
+    <splash src="res/screen/android/screen-ldpi-portrait.png"       platform="android" qualifier="port-ldpi" density="port-ldpi" />
+    <splash src="res/screen/android/screen-mdpi-portrait.png"       platform="android" qualifier="port-mdpi" density="port-mdpi" />
+    <splash src="res/screen/android/screen-hdpi-portrait.png"       platform="android" qualifier="port-hdpi" density="port-hdpi" />
+    <splash src="res/screen/android/screen-xhdpi-portrait.png"      platform="android" qualifier="port-xhdpi" density="port-xhdpi" />
 	
+	<splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" platform="ios" />	
 	
