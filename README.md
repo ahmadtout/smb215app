@@ -12,7 +12,7 @@ Le travail est donc divisé en deux parties : l'interface d'administration (SERV
 Cette interface, hebergée sur un serveur en ligne, doit permettre à l'administrateur, d'une manière simple, d'insérer ou de modifier le contenu du livre.<br>
 Cette interface est principalement basée sur les langages HTML, PHP et MySQL.<br>
 L'accès est protégé par un système d'authentification (login). <br>
-<b> <mark>- Mode d'emploi </mark></b> 
+<mark>- Mode d'emploi </mark>
 il doit entres les nom des partie principales et des sous parties de chaque partie 
 il entre, il fait entree les contenu le nom de paragraph, les contenue du paragraph (il a un test editor pour fait tout les coloration et les chagement les taille des text) et peut metre des photos avant et apres chaque pagaraphes avec des commentaire sous les photos et des notes apres chaque paragraph.
 puis il choit la partie et la sous partie 
