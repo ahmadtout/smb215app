@@ -159,3 +159,6 @@
      *NOT RECOMMENDED* -->
 	<allow-intent href="*" />
 	
+	
+	<!-- Don't block any requests -->
+	<access origin="*" />
